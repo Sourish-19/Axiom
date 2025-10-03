@@ -21,13 +21,13 @@ const LaunchpadCard: React.FC<LaunchpadCardProps> = ({ title, description, items
   return (
     <div className={`
       relative bg-[#1b1b1c] shadow-lg
-      overflow-hidden flex flex-col ${className} max-w-[340px]
+      overflow-hidden flex flex-col justify-center ${className} max-w-[420px] lg:max-w-[340px]
     `}>
-      <div className="p-4 md:p-6 flex flex-col flex-grow">
+      <div className="p-3 md:p-6 flex flex-col">
         <h1 className="text-lg md:text-3xl font-medium text-[#ff541f] mb-4 text-center">
           {title}
         </h1>
-        <p className="text-xs md:text-md text-gray-300 mb-6 flex-grow">
+        <p className="text-xs md:text-md text-gray-300 mb-6">
           {description}
         </p>
 
@@ -97,19 +97,19 @@ const Launchpad: React.FC<LaunchpadProps> = ({ onContactClick }) => {
             The MIC ecosystem is built to minimize all innovation hurdles and maximize student potential. Access our facilities, funding, and mentorship to turn your proof-of-concept into a market-ready product.
           </p>
         </div>
-        <div className="mt-8 flex flex-col lg:flex-row justify-center items-center">
+        <div className="mt-8 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-center items-center">
           <LaunchpadCard
             title="The Innovation Journey"
             description="A clean, simple flowchart or infographic with four distinct, clickable steps, showing the linear progression supported by the MIC."
             items={innovationItems}
             onContactClick={onContactClick}
-            className="lg:rounded-l-[24px] lg:rounded-r-[0px] rounded-[24px] border border-white/10"
+            className="lg:rounded-l-[24px] lg:rounded-r-[0px] rounded-[24px] border border-white/10 lg:h-[480px]"
           />
           <LaunchpadCard
             title="Funding Opportunities"
             description="Turning an idea into a reality requires capital. The MIC provides competitive seed funding and helps you access state and national grants specifically targeted at student and faculty innovation."
             items={fundingItems}
-            className="rounded-[24px]"
+            className="rounded-[24px] lg:h-[540px]"
             onContactClick={onContactClick}
           />
           <LaunchpadCard
@@ -117,7 +117,7 @@ const Launchpad: React.FC<LaunchpadProps> = ({ onContactClick }) => {
             description="The right guide can save you years. Our Mentorship Network connects innovators with a diverse pool of industry leaders."
             items={mentorshipItems}
             onContactClick={onContactClick}
-            className="lg:rounded-r-[24px] lg:rounded-l-[0px] rounded-[24px] border border-white/10"
+            className="lg:rounded-r-[24px] lg:rounded-l-[0px] rounded-[24px] border border-white/10 lg:h-[480px]"
           />
         </div>
       </div>

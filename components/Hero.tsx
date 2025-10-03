@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ onEventClick, onContactClick }) => {
           Accelerate Growth.
         </h1>
         <p className="max-w-2xl mx-auto mt-2 md:mt-6 text-xs md:text-lg text-gray-400">
-          Our AI-powered SaaS platform empowers businesses to streamline operations, automate repetitive tasks, and make smarter, data-driven decisions—all from one intuitive dashboard.
+          To the innovators of MAHE: You bring the ambition. We'll provide the funding, mentorship, and tools to launch your idea. This is where classroom concepts become market-ready ventures that make a real-world impact.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
           <button onClick={onEventClick} className="bg-gradient-to-r from-[#FF541F] to-[#FF8A65] text-white w-[150px] md:w-auto p-2 md:px-8 md:py-3 rounded-md font-semibold text-sm md:text-lg hover:opacity-90 transition-opacity w-full sm:w-auto">
