@@ -18,14 +18,14 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, uid, ac
   const isActive = activeFAQ === uid
 
   return (
-    <div className="border-b border-gray-800 py-6">
-      <button onClick={handleAccordionClick} className="w-full flex justify-between items-center text-left text-lg font-semibold hover:text-[#FF541F] transition-colors">
+    <div className="border-b border-gray-800 py-4 md:py-6">
+      <button onClick={handleAccordionClick} className="w-full flex justify-between items-center text-left text-sm md:text-lg font-semibold hover:text-[#FF541F] transition-colors">
         <span className={`${isActive ? 'text-[#FF541F]' : ''}`}>{question}</span>
         <ChevronDownIcon className={`w-6 h-6 transform transition-transform ${isActive ? 'rotate-180 text-[#FF541F]' : ''}`} />
       </button>
       <div className={`grid grid-rows-[0fr] transition-all duration-300 ease-in-out ${isActive ? 'grid-rows-[1fr] mt-4' : ''}`}>
         <div className="overflow-hidden">
-          <p className="text-gray-400">
+          <p className="text-xs md:text-[16px] text-gray-400">
             {answer}
           </p>
         </div>
@@ -61,7 +61,7 @@ const FAQ = () => {
   const [activeFAQ, setActiveFAQ] = useState(null)
 
   return (
-    <section id="faqs" className="py-20 px-4 relative md:h-[760px]">
+    <section id="faqs" className="py-8 md:py-20 px-4 relative md:h-[760px]">
       {/* Decorative Shapes */}
       <div
         aria-hidden="true"
@@ -76,14 +76,14 @@ const FAQ = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-bold">
+          <h2 className="text-xl md:text-6xl font-bold">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-400 mt-6">
+          <p className="text-xs md:text-lg text-gray-400 mt-2 md:mt-6">
             Got questions? We've got answers. Find everything you need to know about using our platform, plans, and features.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto mt-12">
+        <div className="max-w-4xl mx-auto mt-6 md:mt-12">
           {faqData.map((item, index) => (
             <AccordionItem
               key={++index}

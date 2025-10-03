@@ -21,30 +21,26 @@ const LaunchpadCard: React.FC<LaunchpadCardProps> = ({ title, description, items
   return (
     <div className={`
       relative bg-[#1b1b1c] shadow-lg
-      overflow-hidden flex flex-col ${className}
+      overflow-hidden flex flex-col ${className} max-w-[340px]
     `}>
-      <div className="p-8 flex flex-col flex-grow">
-        <h1 className="text-3xl font-medium text-[#ff541f] mb-4 text-center">
+      <div className="p-4 md:p-6 flex flex-col flex-grow">
+        <h1 className="text-lg md:text-3xl font-medium text-[#ff541f] mb-4 text-center">
           {title}
         </h1>
-        <p className="text-base text-gray-300 mb-6 flex-grow">
+        <p className="text-xs md:text-md text-gray-300 mb-6 flex-grow">
           {description}
         </p>
 
         <div className="mb-8">
-          <h4 className="text-lg font-semibold text-white mb-4">What's included</h4>
+          <h4 className="text-sm md:text-lg font-semibold text-white mb-4">What's included</h4>
           <ul className="space-y-3">
             {items.map((item, index) => (
               <li key={index} className="flex items-start gap-4 text-gray-300">
-                {/* <CheckCircleIcon className={`
-                  mt-1 mr-3 flex-shrink-0 text-lg
-                  ${isMiddleCard || item.isOrangeCheck ? 'text-orange-600' : 'text-white/50'}
-                `} /> */}
-                <div className="bg-[#ff541f] border border-black text-black rounded-full p-[2px] text-xs mt-1">
+                <div className="bg-[#ff541f] border border-black text-black rounded-full p-[2px] text-xs md:mt-1">
                   <FaCheck />
                 </div>
 
-                <span>{item.text}</span>
+                <span className="text-xs md:text-md">{item.text}</span>
               </li>
             ))}
           </ul>
@@ -54,7 +50,7 @@ const LaunchpadCard: React.FC<LaunchpadCardProps> = ({ title, description, items
           onClick={onContactClick}
           className={`
             m-auto w-[160px] inline-flex items-center justify-center
-            px-8 py-3 rounded-md text-white text-lg font-medium
+            p-2 md:px-8 md:py-3 rounded-md text-white text-sm md:text-lg font-medium
             transition-colors duration-200
             focus:outline-none focus:ring-2 focus:ring-offset-2
             bg-orange-600 hover:bg-orange-700 focus:ring-orange-500
@@ -90,18 +86,18 @@ const Launchpad: React.FC<LaunchpadProps> = ({ onContactClick }) => {
   return (
     <section
       id="resources"
-      className="py-20 px-4 relative"
+      className="py-8 md:py-20 px-4 relative"
     >
       <div className="container max-w-[1280px] mx-auto relative">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-lg md:text-6xl font-bold leading-tight">
             Your Launchpad to Innovation: Tools, Funding, and Mentorship
           </h2>
-          <p className="text-lg text-gray-400 mt-6">
+          <p className="text-xs md:text-lg text-gray-400 mt-2 md:mt-6">
             The MIC ecosystem is built to minimize all innovation hurdles and maximize student potential. Access our facilities, funding, and mentorship to turn your proof-of-concept into a market-ready product.
           </p>
         </div>
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 lg:gap-0 gap-6 items-center">
+        <div className="mt-8 flex flex-col lg:flex-row justify-center items-center">
           <LaunchpadCard
             title="The Innovation Journey"
             description="A clean, simple flowchart or infographic with four distinct, clickable steps, showing the linear progression supported by the MIC."

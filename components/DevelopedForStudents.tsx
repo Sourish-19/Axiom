@@ -11,22 +11,22 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, content, className = '', hasGradient = false }) => {
   return (
     <div
-      className={`bg-[#181818] h-[300px] sm:h-[260px] md:h-[360px] lg:h-[280px] xl:h-[220px] rounded-3xl group relative overflow-hidden ${className}`}
+      className={`bg-[#181818] h-[180px] md:h-[240px] lg:h-[260px] xl:h-[220px] rounded-3xl group relative overflow-hidden ${className}`}
     >
       {hasGradient && (
         <div aria-hidden="true" className="absolute z-1 top-1/3 left-1/3 size-full bg-[radial-gradient(circle,_#602614_0%,_transparent_100%)] blur-2xl"></div>
       )}
 
-      <div className='absolute z-2 top-0 bottom-0 left-0 right-0 p-6 flex flex-col justify-between'>
+      <div className='absolute z-2 top-0 bottom-0 left-0 right-0 p-3 md:p-6 flex flex-col justify-between'>
         <div className="flex justify-between items-start">
-          <p className="text-gray-400 text-base pr-4">{content}</p>
+          <p className="text-gray-400 text-[12px] md:text-[14px] lg:text-[16px] pr-4">{content}</p>
           <div className="hidden lg:block bg-[#FF541F] p-3 rounded-full text-white group-hover:rotate-45 transition-transform duration-300 flex-shrink-0">
             <ArrowRightIcon className="w-6 h-6 transform -rotate-45" />
           </div>
         </div>
 
         <div>
-          <h3 className="text-[34px] tracking-[-2px] font-thin">{title}</h3>
+          <h3 className="md:text-xl lg:text-[34px] lg:tracking-[-2px] font-thin">{title}</h3>
         </div>
       </div>
     </div>
@@ -39,17 +39,17 @@ const DevelopedForStudents = () => {
     <section id="about" className="py-20 px-4">
       <div className="container max-w-[1280px] mx-auto">
         <div className="max-w-3xl mb-12">
-          <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-xl md:text-6xl font-bold leading-tight">
             Developed for Students.
             <br />
             Powered by <span className="text-[#FF541F]">MIC.</span>
           </h2>
-          <p className="mt-6 text-lg text-gray-400">
+          <p className="mt-2 md:mt-6 text-xs md:text-lg text-gray-400">
             Unlock the full potential of your creativity with our MIC-powered student assistant. Explore new dimensions of skills and techniques.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-8">
           <Card
             className="md:col-span-2"
             title="Mission"

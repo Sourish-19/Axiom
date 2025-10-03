@@ -9,7 +9,7 @@ const Hero: React.FC<HeroProps> = ({ onEventClick, onContactClick }) => {
   return (
     <section 
       id="home" 
-      className="py-32 px-4 relative"
+      className="pt-28 pb-12 md:py-32 px-4 relative"
     >
       <div className="container mx-auto text-center relative">
         <div className="flex justify-center items-center mb-6 bg-gray-900 bg-opacity-50 border border-gray-700 rounded-full px-4 py-2 w-fit mx-auto backdrop-blur-sm">
@@ -26,19 +26,19 @@ const Hero: React.FC<HeroProps> = ({ onEventClick, onContactClick }) => {
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+        <h1 className="text-2xl md:text-7xl font-extrabold leading-tight">
           Automate <span className="text-[#FF541F]">Intelligence.</span>
           <br />
           Accelerate Growth.
         </h1>
-        <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-400">
+        <p className="max-w-2xl mx-auto mt-2 md:mt-6 text-xs md:text-lg text-gray-400">
           Our AI-powered SaaS platform empowers businesses to streamline operations, automate repetitive tasks, and make smarter, data-driven decisions—all from one intuitive dashboard.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-          <button onClick={onEventClick} className="bg-gradient-to-r from-[#FF541F] to-[#FF8A65] text-white px-8 py-3 rounded-md font-semibold text-lg hover:opacity-90 transition-opacity w-full sm:w-auto">
+          <button onClick={onEventClick} className="bg-gradient-to-r from-[#FF541F] to-[#FF8A65] text-white w-[150px] md:w-auto p-2 md:px-8 md:py-3 rounded-md font-semibold text-sm md:text-lg hover:opacity-90 transition-opacity w-full sm:w-auto">
             Get Started
           </button>
-          <button onClick={onContactClick} className="border border-gray-600 text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-800 transition-colors w-full sm:w-auto">
+          <button onClick={onContactClick} className="border border-gray-600 text-white w-[150px] md:w-auto p-2 md:px-8 md:py-3 rounded-md font-semibold text-sm md:text-lg hover:bg-gray-800 transition-colors w-full sm:w-auto">
             Get In Touch
           </button>
         </div>

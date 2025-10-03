@@ -53,14 +53,14 @@ interface MICSystemProps {
 
 const MICSystem: React.FC<MICSystemProps> = ({ onEventClick }) => {
     return (
-        <section id="events" className="py-20 px-4">
+        <section id="events" className="py-8 md:py-20 px-4">
             <div className="container max-w-[1280px] mx-auto text-center">
                 <p className="text-lg text-gray-400 font-semibold">MIC 2025</p>
-                <h2 className="text-4xl md:text-5xl font-bold mt-4 max-w-5xl mx-auto leading-tight">
+                <h2 className="text-lg md:text-5xl font-bold mt-4 max-w-5xl mx-auto leading-tight">
                     The MIC ecosystem is designed to minimize hurdles and maximize your potential. Access the facilities, financial support, and expert guidance you need to take your project from a proof-of-concept to a market-ready product.
                 </h2>
 
-                <div className="mt-20">
+                <div className="mt-12 md:mt-20">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                         {timelineItems.map((item, index) => (
                             <div key={index} className={`relative xl:h-auto h-[160px] flex flex-col items-center ${index % 2 !== 0 ? "xl:mt-[84px]" : ""}`}>
@@ -111,8 +111,8 @@ const MICSystem: React.FC<MICSystemProps> = ({ onEventClick }) => {
                     </div>
                 </div>
 
-                <div className="mt-36 flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <button onClick={onEventClick} className="bg-gradient-to-r from-[#FF541F] to-[#FF8A65] text-white px-8 py-3 rounded-md font-semibold text-lg hover:opacity-90 transition-opacity w-full sm:w-auto flex items-center justify-center gap-2">
+                <div className="mt-16 md:mt-36 flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <button onClick={onEventClick} className="bg-gradient-to-r from-[#FF541F] to-[#FF8A65] text-white w-[140px] lg:w-auto p-2 md:px-8 md:py-3 rounded-md font-semibold text-sm md:text-lg hover:opacity-90 transition-opacity w-full sm:w-auto flex justify-center gap-2">
                         Get Started <ArrowRightIcon className="w-5 h-5" />
                     </button>
                     <div className="flex items-center gap-3">

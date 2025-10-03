@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           })}
         </nav>
         <div className="flex items-center space-x-4">
-          <button onClick={onContactClick} className="bg-gradient-to-r from-[#FF541F] to-[#FF8A65] text-white px-6 py-2 rounded-md font-semibold hover:opacity-90 transition-opacity">
+          <button onClick={onContactClick} className="hidden md:block bg-gradient-to-r from-[#FF541F] to-[#FF8A65] text-white px-6 py-2 rounded-md font-semibold hover:opacity-90 transition-opacity">
             Contact us
           </button>
           <button
@@ -104,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
         <motion.div
           initial={{ height: "64px" }}
           animate={{ height: "auto" }}
-          className="lg:hidden absolute z-1 bg-black border-b border-white/30 backdrop-blur left-0 top-[80px] right-0 flex flex-col items-center pb-4"
+          className="lg:hidden absolute z-1 bg-black border-b border-white/30 backdrop-blur left-0 top-[80px] right-0 flex flex-col items-center pb-4 overflow-hidden"
         >
           {navLinks.map((link) => {
             const id = link.href.substring(1);
