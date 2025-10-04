@@ -106,17 +106,4 @@ emailjs.sendForm(
 
 ---
 
-## 📜 License
-
-Specify your license here (e.g., MIT, Apache 2.0, etc.)
-
----
-
-## 🙏 Credits
-
-- Developed by [Sourish-19](https://github.com/Sourish-19)
-- Inspired by MAHE Innovation Centre
-
----
-
 Feel free to contribute or open issues for feature requests or bug reports!

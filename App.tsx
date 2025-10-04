@@ -24,12 +24,8 @@ function App() {
   return (
     <div className="relative bg-black text-white overflow-hidden relative">
       { isLoading && <Loader /> }
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: `url(${'/axiom_bg2.jpg'})`, backgroundSize: 'cover' }}></div>
-      {/* <img src='/axiom_bg2.png' alt="background glow top" className="absolute -top-1/2 -right-1/4 w-full h-auto z-0 opacity-50 mix-blend-screen" />
-      <img src="https://i.imgur.com/9v1M618.png" alt="background wave bottom" className="absolute -bottom-1/3 left-0 w-full h-auto z-0 opacity-40 mix-blend-screen" /> */}
-
-
+      
+      <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: `url(${'/axiom_bg.jpg'})`, backgroundSize: 'cover' }}></div>
       <div className="relative z-10 px-6">
         <Header onContactClick={() => setIsContactModalOpen(true)} />
         <main>
